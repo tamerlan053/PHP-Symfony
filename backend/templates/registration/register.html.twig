@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Registreren{% endblock %}
+
+{% block body %}
+    <div class="container mt-5" style="max-width: 500px;">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">Maak een nieuw account</h4>
+            </div>
+            <div class="card-body">
+                {{ form_start(form) }}
+
+                <div class="mb-3">
+                    {{ form_label(form.email, null, {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(form.email) }}
+                </div>
+
+                <div class="mb-3">
+                    {{ form_label(form.plainPassword.first, 'Wachtwoord', {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(form.plainPassword.first) }}
+                </div>
+
+                <div class="mb-3">
+                    {{ form_label(form.plainPassword.second, 'Herhaal wachtwoord', {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(form.plainPassword.second) }}
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Registreren</button>
+
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

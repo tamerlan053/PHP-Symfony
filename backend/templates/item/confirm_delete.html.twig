@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bevestig verwijdering{% endblock %}
+
+{% block body %}
+    <div class="alert alert-warning">
+        <h4 class="alert-heading">Weet je het zeker?</h4>
+        <p>Ben je zeker dat je het artikel <strong>{{ item.name }}</strong> wil verwijderen?</p>
+
+        <form method="post">
+            <a href="{{ path('item_index') }}" class="btn btn-secondary">Annuleer</a>
+            <button type="submit" class="btn btn-danger">Verwijder</button>
+        </form>
+    </div>
+{% endblock %}

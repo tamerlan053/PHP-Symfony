@@ -1,0 +1,20 @@
+name: wp2-webadv
+services:
+  mysql-db:
+    image: mysql:8.3
+    environment:
+      MYSQL_ROOT_PASSWORD: toor
+      MYSQL_DATABASE: database_webadv
+      MYSQL_USER: user
+      MYSQL_PASSWORD: resu
+    ports:
+      - "3306:3306"
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    links:
+      - mysql-db
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: mysql-db
+      MYSQL_ROOT_PASSWORD: toor

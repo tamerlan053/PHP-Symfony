@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Welcome to Tamerlan & Claudio's computershop!</h1>
+
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-8 text-center">
+                <p class="lead">
+                    This application is built to help you manage the inventory of a computer store. Inside of this application, you're able to view, add, edit, and delete product stock information securely and efficiently. To get started with any of this functionality, you are first required to log in.
+                </p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mb-5">
+            <div class="row mb-4">
+                <div class="col text-center">
+                    <h2>Our Team</h2>
+                </div>
+            </div>
+
+            <div class="col-md-4 text-center">
+                <img src="{{ asset('images/claudio.jpeg') }}" alt="Tim" class="img-fluid rounded-circle mb-2" style="width: 150px;">
+                <h5>Claudio</h5>
+                <p>Fullstack Developer</p>
+            </div>
+
+            <div class="col-md-4 text-center">
+                <img src="{{ asset('images/tamerlan.jpeg') }}" alt="Sam" class="img-fluid rounded-circle mb-2" style="width: 150px;">
+                <h5>Tamerlan</h5>
+                <p>Security Engineer</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
